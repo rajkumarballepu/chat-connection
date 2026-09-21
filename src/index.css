@@ -1,0 +1,89 @@
+:root {
+    /* Light theme */
+    --bg-solid: #f1dbfc;
+    --surface: rgba(255, 255, 255, 0.38);
+    --surface-hover: rgba(255, 255, 255, 0.55);
+    --surface-raised: rgba(255, 255, 255, 0.46);
+    --border: rgba(255, 255, 255, 0.55);
+    --border-strong: rgba(46, 44, 39, 0.12);
+
+    --text-primary: #2e2c27;
+    --text-secondary: #6e6b62;
+    --text-muted: #948f81;
+
+    --accent: #5b7a63;
+    --accent-glass: rgba(91, 122, 99, 0.55);
+    --accent-text: #f3f6f0;
+
+    --bubble-sent: rgba(91, 122, 99, 0.62);
+    --bubble-sent-text: #f5f8f3;
+    --bubble-received: rgba(255, 255, 255, 0.5);
+    --bubble-received-text: #2e2c27;
+
+    --danger: #b25b4a;
+    --success: #5b7a63;
+
+    --blur: blur(22px);
+    --blur-strong: blur(32px);
+    --shadow:
+        0 1px 1px rgba(46, 44, 39, 0.04), 0 10px 30px rgba(46, 44, 39, 0.08);
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+
+    /* Glossy backgroun */
+    --glossy-background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] {
+    --bg-solid: #120120;
+    --surface: rgba(255, 255, 255, 0.06);
+    --surface-hover: rgba(255, 255, 255, 0.1);
+    --surface-raised: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.12);
+    --border-strong: rgba(255, 255, 255, 0.18);
+
+    --text-primary: #e7e3d8;
+    --text-secondary: #a6a399;
+    --text-muted: #726f65;
+
+    --accent: #8fb39a;
+    --accent-glass: rgba(143, 179, 154, 0.35);
+    --accent-text: #12201a;
+
+    --bubble-sent: rgba(143, 179, 154, 0.28);
+    --bubble-sent-text: #e9f1ea;
+    --bubble-received: rgba(255, 255, 255, 0.08);
+    --bubble-received-text: #e7e3d8;
+
+    --danger: #d98f7e;
+    --success: #8fb39a;
+
+    --blur: blur(22px);
+    --blur-strong: blur(32px);
+    --shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 14px 40px rgba(0, 0, 0, 0.4);
+    
+    /* Glossy background */
+    --glossy-background: rgba(143, 143, 143, 0.5);
+}
+
+/* Fallback for pages with no manual toggle - follows OS setting */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        /* same values as :root[data-theme="dark"] above */
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}

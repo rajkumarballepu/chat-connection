@@ -1,0 +1,53 @@
+.bubble {
+    padding-left: 1rem !important;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    max-width: 100%;
+    width: fit-content;
+    position: relative;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.37);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+}
+
+.bubble.self {
+    background-color: var(--bubble-sent);
+    color: var(--bubble-sent-text);
+    margin-left: auto;
+}
+
+.bubble.other.first {
+    border-top-left-radius: 0px !important;
+}
+
+.bubble.self.first {
+    border-top-right-radius: 0px !important;
+}
+
+.bubble.other {
+    background-color: var(--bubble-received);
+    color: var(--bubble-received-text);
+}
+
+.bubble .message {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bubble .time {
+    font-size: 0.6rem;
+    margin-top: 5px;
+    display: block;
+    text-align: right;
+    transform: translateY(10px);
+}
+
+.bubble .status {
+    position: absolute;
+    top: 105%;
+    right: 5px;
+    font-size: 0.7rem;
+}

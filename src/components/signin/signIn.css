@@ -1,0 +1,32 @@
+.sign-in {
+    width: 400px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    color: #1171a8;
+    transition: all 0.3s ease;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head svg {
+    width: 50px;
+    height: 50px;
+}
+
+.head svg path {
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+    transform-origin: center;
+    transform: rotate(0deg);
+}
+
+.head:hover svg path {
+    transform: rotate(360deg);
+}
+
+.head h3 {
+    color: #0f1011;
+}
