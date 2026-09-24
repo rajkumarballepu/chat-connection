@@ -139,7 +139,6 @@ export default function ChatWindow({
     cookie,
     setIsAuthenticated,
     removeCookie,
-    setLoading,
     user,
     toast,
 }) {
@@ -154,10 +153,10 @@ export default function ChatWindow({
             console.log("Fetched chat list items:", contacts);
             setChats(contacts);
         };
-        console.log(cookie.userProfile);
-        setLoading(true);
+        console.log(user);
+
         fetchInitialChats();
-        setLoading(false);
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -322,7 +321,7 @@ export default function ChatWindow({
                     sideActive={sideActive}
                     setIsAuthenticated={setIsAuthenticated}
                     removeCookie={removeCookie}
-                    setLoading={setLoading}
+            
                     user={user}
                 />
             </div>

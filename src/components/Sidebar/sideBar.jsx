@@ -8,7 +8,7 @@ export default function Sidebar({
     setIsAuthenticated,
     removeCookie,
     setLoading,
-    user
+    user,
 }) {
     const [toggle, setToggle] = useState(false);
     const handleToggle = (e) => {
@@ -18,13 +18,19 @@ export default function Sidebar({
         setSideActive(!sideActive);
     };
 
-
     return (
         <div className="sidebar">
             <div className="nav-ctl">
                 <div className="user-container">
                     <div className="user-image">
-                        <i className="fa-solid fa-circle-user"></i>
+                        {user.image ? (
+                            <img
+                                src={`http://localhost:8080/api/v1/auth/files/image/${user.image.id}`}
+                                alt=""
+                            />
+                        ) : (
+                            <i className="fa-solid fa-circle-user"></i>
+                        )}
                     </div>
                     <div className="user-details mt-2">
                         <h6>{user?.name || "User"}</h6>

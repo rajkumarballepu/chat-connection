@@ -11,7 +11,7 @@
     --text-secondary: #6e6b62;
     --text-muted: #948f81;
 
-    --accent: #5b7a63;
+    --accent: #24083b;
     --accent-glass: rgba(91, 122, 99, 0.55);
     --accent-text: #f3f6f0;
 
@@ -26,7 +26,7 @@
     --blur: blur(22px);
     --blur-strong: blur(32px);
     --shadow:
-        0 1px 1px rgba(46, 44, 39, 0.04), 0 10px 30px rgba(46, 44, 39, 0.08);
+        0 1px 1px rgba(46, 44, 39, 0.04), 0 10px 20px rgba(46, 44, 39, 0.08);
 
     --radius-sm: 8px;
     --radius-md: 14px;
@@ -37,7 +37,7 @@
 }
 
 [data-theme="dark"] {
-    --bg-solid: #120120;
+    --bg-solid: #160f1b;
     --surface: rgba(255, 255, 255, 0.06);
     --surface-hover: rgba(255, 255, 255, 0.1);
     --surface-raised: rgba(255, 255, 255, 0.07);
@@ -48,9 +48,9 @@
     --text-secondary: #a6a399;
     --text-muted: #726f65;
 
-    --accent: #8fb39a;
+    --accent: #24083b;
     --accent-glass: rgba(143, 179, 154, 0.35);
-    --accent-text: #12201a;
+    --accent-text: #ffffff;
 
     --bubble-sent: rgba(143, 179, 154, 0.28);
     --bubble-sent-text: #e9f1ea;
@@ -62,10 +62,10 @@
 
     --blur: blur(22px);
     --blur-strong: blur(32px);
-    --shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 14px 40px rgba(0, 0, 0, 0.4);
+    --shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2), 0 4px 30px rgba(0, 0, 0, 0.1);
     
     /* Glossy background */
-    --glossy-background: rgba(143, 143, 143, 0.5);
+    --glossy-background: rgba(225, 225, 225, 0.2);
 }
 
 /* Fallback for pages with no manual toggle - follows OS setting */
@@ -85,5 +85,8 @@ body {
     margin: 0;
     position: relative;
     overflow-x: hidden;
-    min-height: 100vh;
+}
+
+.dvh-100 {
+    height: 100vh;
 }
